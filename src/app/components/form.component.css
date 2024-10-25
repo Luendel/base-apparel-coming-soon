@@ -52,6 +52,10 @@ div {
         font-size: 2vh;
     }
 
+    input::placeholder {
+        color: hsl(0, 36%, 70%);
+    }
+
     div {
         width: 2.67vw;
         padding-left: 3.07vw;
