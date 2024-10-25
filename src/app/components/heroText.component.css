@@ -29,18 +29,24 @@ p {
 
 
 @media (min-width: 750px) {
+    section {
+        padding-top: 9.125vh;
+    }
+
     h1 {
+        font-size: 5.875vh;
+        line-height: 7vh;
         text-align: left;
         width: 30.93vw;
         margin: 0 auto;
-        margin-top: 8.89vh;
+        margin-top: 9.125vh;
     }
 
     p {
         text-align: left;
         width: 30.93vw;
         margin: 0 auto;
-        margin-top: 5.29vh;
-        font-size: 0.53rem;
+        margin-top: 5.25vh;
+        font-size: 2vh;
     }
 }

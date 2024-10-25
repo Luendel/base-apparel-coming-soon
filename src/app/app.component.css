@@ -10,10 +10,9 @@ main {
             max-height: 100vh;
             display: grid;
             grid-template-columns: 57.73vw 42.27vw;
-            grid-template-rows: 1fr 1fr 1fr;
-            background: none;
+            grid-template-rows: 10.5vh 1fr 1fr;
             background-image: url("/images/bg-pattern-desktop.svg");
-            background-size: cover;
+            background-size: contain;
             background-repeat: repeat-x;
     }
 
