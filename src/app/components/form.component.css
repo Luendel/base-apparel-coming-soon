@@ -21,7 +21,7 @@ input {
     text-indent: 3.75vw;
     border-radius: 2rem;
     background: transparent;
-    color: hsl(0, 36%, 70%);
+    color: hsl(0, 6%, 24%);
 }
 
 div {
@@ -60,6 +60,15 @@ div {
         width: 2.67vw;
         padding-left: 3.07vw;
         padding-right: 3.07vw;
+    }
+
+    div:hover {
+        cursor:pointer;
+        opacity: 70%;
+    }
+
+    div:active{
+        opacity: 50%;
     }
 
     img {
