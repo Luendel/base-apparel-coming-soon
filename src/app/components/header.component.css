@@ -1,0 +1,22 @@
+.header-image {
+    padding-top: 3.8vh;
+    padding-bottom: 3.8vh;
+}
+
+img {
+    margin-left: 8.5vw;
+    width: 26.67vw;
+}
+
+
+@media (min-width: 750px) {
+    .header-image {
+        padding-top: 7.92vh;
+        padding-bottom: 0;
+    }
+
+    img {
+        width: 11.2vw;
+        margin-left: 11.47vw;
+    }
+}
