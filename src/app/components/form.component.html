@@ -1,8 +1,11 @@
 <section class="container-fluid mx-0">
     <form>
-        <fieldset>
-            <input type="email" name="email-input" id="email-input" placeholder="Email Address">
-            <div>
+        <fieldset #field>
+            <input type="email" name="email-input" placeholder="Email Address" (change)="handleText($event)" (blur)="validateInputText(this.error, this.field)">
+            <span #error>
+                <img src="images/icon-error.svg" alt="error" >
+            </span>
+            <div (click)="mySubmit()">
                 <img  src="images/iconArrow.svg" alt="Submit button">
             </div>
         </fieldset>

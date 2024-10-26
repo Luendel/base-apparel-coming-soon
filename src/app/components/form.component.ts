@@ -6,5 +6,27 @@ import { Component } from "@angular/core";
     styleUrl:"./form.component.css"
 })
 export class FormComponent {
+    text: string = ""
+    isEmailValid:boolean = false
     
+    mySubmit(){
+        alert(this.text)
+    }
+
+    handleText(event:Event){
+        let element = event.target as HTMLInputElement
+        this.text = element.value
+    }
+
+    validateInputText(html_Element: HTMLElement, html_field: HTMLElement){
+        if(this.text == ""){
+            html_Element.style.opacity = "100%"
+            html_field.style.border = "2px solid hsl(0, 93%, 68%)"
+        }
+        else {
+            html_Element.style.opacity = "0%"
+            html_field.style.border = "1px solid hsl(0, 36%, 70%)"
+        }
+    }   
+
 }
