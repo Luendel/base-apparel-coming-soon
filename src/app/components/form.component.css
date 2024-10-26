@@ -39,6 +39,15 @@ div {
     box-shadow: 1px 1px 0.6rem hsl(0, 74%, 74%);
 }
 
+div:hover {
+    cursor:pointer;
+    opacity: 70%;
+}
+
+div:active{
+    opacity: 50%;
+}
+
 
 @media (min-width: 1000px) {
     section {
@@ -60,15 +69,6 @@ div {
         width: 2.67vw;
         padding-left: 3.07vw;
         padding-right: 3.07vw;
-    }
-
-    div:hover {
-        cursor:pointer;
-        opacity: 70%;
-    }
-
-    div:active{
-        opacity: 50%;
     }
 
     img {
