@@ -3,7 +3,7 @@ main {
     min-height: 100vh;
 }
 
-@media (min-width:750px) {
+@media (min-width:1000px) {
     main {
             min-height: 0;
             max-width: 100vw;

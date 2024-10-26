@@ -18,7 +18,7 @@ export class HeroImage implements AfterViewInit, OnDestroy, OnInit {
     ngOnInit(): void {
             this.loadSubscription = fromEvent(window,"load")
                 .subscribe(()=> {
-                    if(window.innerWidth >= 750 && window.innerWidth - window.innerHeight >= 320){
+                    if(window.innerWidth >= 1000){
                         this.path = "images/hero-desktop.jpg"
 
                     } else {
@@ -30,7 +30,7 @@ export class HeroImage implements AfterViewInit, OnDestroy, OnInit {
     ngAfterViewInit(): void {
             this.resizeSubscription = fromEvent(window , "resize")
             .subscribe(()=> {
-                if(window.innerWidth >= 750 && window.innerWidth - window.innerHeight >= 320){
+                if(window.innerWidth >= 1000){
                     this.path = "images/hero-desktop.jpg"
 
                 } else {
