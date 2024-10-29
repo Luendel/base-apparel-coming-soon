@@ -39,6 +39,21 @@ div {
     box-shadow: 1px 1px 0.6rem hsl(0, 74%, 74%);
 }
 
+span {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    width: auto;
+    position: relative;
+    right: 4vw;
+    opacity: 0%;
+}
+
+span img {
+    width: 3.2vw;
+    height: 3.2vw;
+}
+
 div:hover {
     cursor:pointer;
     opacity: 70%;
@@ -50,7 +65,7 @@ div:active{
 
 p {
     width: 82.9vw;
-    margin-left: 14.8vw;
+    margin-left: 9.8vw;
     margin-top: 1vh;
     color: transparent;
     user-select: none;
@@ -97,6 +112,10 @@ p {
     div img {
         width: 0.8vw;
         height: 2.64vh;
+    }
+
+    p {
+        margin-left: 14.8vw;
     }
 }
 

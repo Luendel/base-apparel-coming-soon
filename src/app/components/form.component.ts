@@ -8,9 +8,12 @@ import { Component } from "@angular/core";
 export class FormComponent {
     text: string = ""
     isEmailValid:boolean = false
+    regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
     
     mySubmit(){
-        alert(this.text)
+        if(this.text == "" || !this.regex.test(this.text)){
+            alert(this.text)
+        }
     }
 
     handleText(event:Event){
@@ -19,7 +22,8 @@ export class FormComponent {
     }
 
     validateInputText(html_Element: HTMLElement, html_field: HTMLElement, html_caption: HTMLElement){
-        if(this.text == ""){
+
+        if(this.text == "" || !this.regex.test(this.text)){
             html_Element.style.opacity = "100%"
             html_field.style.border = "2px solid hsl(0, 93%, 68%)"
             html_caption.style.color = "hsl(0, 74%, 74%)"
