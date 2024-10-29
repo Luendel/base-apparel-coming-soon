@@ -18,14 +18,18 @@ export class FormComponent {
         this.text = element.value
     }
 
-    validateInputText(html_Element: HTMLElement, html_field: HTMLElement){
+    validateInputText(html_Element: HTMLElement, html_field: HTMLElement, html_caption: HTMLElement){
         if(this.text == ""){
             html_Element.style.opacity = "100%"
             html_field.style.border = "2px solid hsl(0, 93%, 68%)"
+            html_caption.style.color = "hsl(0, 74%, 74%)"
+            html_caption.style.userSelect = "text"
         }
         else {
             html_Element.style.opacity = "0%"
             html_field.style.border = "1px solid hsl(0, 36%, 70%)"
+            html_caption.style.color = "transparent"
+            html_caption.style.userSelect = "none"
         }
     }   
 

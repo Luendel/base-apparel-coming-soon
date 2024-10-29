@@ -48,6 +48,15 @@ div:active{
     opacity: 50%;
 }
 
+p {
+    width: 82.9vw;
+    margin-left: 14.8vw;
+    margin-top: 1vh;
+    color: transparent;
+    user-select: none;
+    font-size: 1.5vh;
+}
+
 @media (min-width: 1000px) {
     section {
         margin-top: 5.29vh;

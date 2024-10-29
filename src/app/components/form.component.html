@@ -1,7 +1,7 @@
 <section class="container-fluid mx-0">
     <form>
         <fieldset #field>
-            <input type="email" name="email-input" placeholder="Email Address" (change)="handleText($event)" (blur)="validateInputText(this.error, this.field)">
+            <input type="email" name="email-input" placeholder="Email Address" (change)="handleText($event)" (blur)="validateInputText(this.error, this.field,this.caption)">
             <span #error>
                 <img src="images/icon-error.svg" alt="error" >
             </span>
@@ -9,5 +9,6 @@
                 <img  src="images/iconArrow.svg" alt="Submit button">
             </div>
         </fieldset>
+        <p #caption>Please provide a valid email</p>
     </form>
 </section>
