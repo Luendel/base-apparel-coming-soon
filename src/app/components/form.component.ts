@@ -12,6 +12,10 @@ export class FormComponent {
     
     mySubmit(){
         if(this.text == "" || !this.regex.test(this.text)){
+            alert("Enter a valid email")
+        }
+
+        else {
             alert(this.text)
         }
     }
