@@ -1,4 +1,5 @@
-import { Component, OnDestroy, AfterViewInit, OnInit} from "@angular/core";
+import { isPlatformBrowser } from "@angular/common";
+import { Component, OnDestroy, OnInit, Inject, PLATFORM_ID} from "@angular/core";
 import { Subscription, fromEvent } from "rxjs"
 
 @Component({
@@ -6,16 +7,17 @@ import { Subscription, fromEvent } from "rxjs"
     templateUrl:"./heroImage.component.html",
     styleUrl:"./heroImage.component.css"
 })
-export class HeroImage implements AfterViewInit, OnDestroy, OnInit {
+export class HeroImage implements OnDestroy, OnInit {
 
     path!: string;
 
     resizeSubscription!: Subscription;
     loadSubscription!: Subscription;
 
-    constructor(){}
+    constructor(@Inject(PLATFORM_ID) private platformId : any){}
     
     ngOnInit(): void {
+        if(isPlatformBrowser(this.platformId)){
             this.loadSubscription = fromEvent(window,"load")
                 .subscribe(()=> {
                     if(window.innerWidth >= 1000){
@@ -25,9 +27,6 @@ export class HeroImage implements AfterViewInit, OnDestroy, OnInit {
                         this.path = "images/hero-mobile.jpg";
                     }
                 })
-        }
-    
-    ngAfterViewInit(): void {
             this.resizeSubscription = fromEvent(window , "resize")
             .subscribe(()=> {
                 if(window.innerWidth >= 1000){
@@ -37,11 +36,9 @@ export class HeroImage implements AfterViewInit, OnDestroy, OnInit {
                     this.path = "images/hero-mobile.jpg";
                 }
             })
-
+        }
             
-    }
-
-   
+        }
 
     ngOnDestroy(): void {
         if(this.resizeSubscription){
